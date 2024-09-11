@@ -33,7 +33,7 @@ Follow these steps to set up and run the Rails API locally.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-backend-repo.git
+git clone https://github.com/dionarya23/chat-app-be.git
 cd your-backend-repo
 ```
 
