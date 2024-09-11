@@ -1,8 +1,6 @@
-# config/initializers/cors.rb
-
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://chat-app-fe-beta-pied.vercel.app/'  # Update this with the origin of your frontend
+    origins 'https://chat-app-fe-beta-pied.vercel.app'  # Remove the trailing slash
 
     resource '*',
       headers: :any,
