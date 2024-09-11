@@ -34,7 +34,7 @@ Follow these steps to set up and run the Rails API locally.
 
 ```bash
 git clone https://github.com/dionarya23/chat-app-be.git
-cd your-backend-repo
+cd chat-app-be
 ```
 
 ### 2. Install Dependencies
