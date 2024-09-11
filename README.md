@@ -80,3 +80,58 @@ rails server
 ```
 The API will be accessible at ```http://localhost:3000```.
 
+
+## API Endpoints
+### 1. Get All Rooms
+
+### Endpoint: ```GET /api/rooms```
+
+Fetches all available chat rooms.
+
+```bash
+curl http://localhost:3000/api/rooms
+```
+
+Response:
+```json
+[
+  { "id": 1, "room_name": "General" },
+  { "id": 2, "room_name": "Tech" },
+  { "id": 3, "room_name": "Design" }
+]
+```
+
+### 2. Get Messages by Room ID
+### Endpoint: ```GET /api/rooms/:room_id/messages```
+
+Fetches all messages for a given room.
+```bash
+curl http://localhost:3000/api/rooms/1/messages
+```
+Response:
+```json
+{
+  "messages": [
+    { "user": "JohnDoe", "message": "Hello there!" },
+    { "user": "JaneDoe", "message": "Hi!" }
+  ]
+}
+```
+
+### 3. Send a Message
+### Endpoint: ```POST /api/rooms/:room_id/messages```
+
+Sends a new message to the specified room.
+```bash
+curl -X POST http://localhost:3000/api/rooms/1/messages \
+-H "Content-Type: application/json" \
+-d '{"message": {"user": "JohnDoe", "message": "Hello!"}}'
+```
+
+Response:
+```json
+{
+  "user": "JohnDoe",
+  "message": "Hello!"
+}
+```
