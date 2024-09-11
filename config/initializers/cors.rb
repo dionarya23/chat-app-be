@@ -1,6 +1,6 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://chat-app-fe-beta-pied.vercel.app'  # Remove the trailing slash
+    origins '*'
 
     resource '*',
       headers: :any,
